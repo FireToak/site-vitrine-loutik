@@ -1,0 +1,414 @@
+/* --- 1. Variables & Configuration --- */
+:root {
+     /* Palette de couleurs */
+     --color-main: #d3f1ff;        /* Bleu clair */
+     --color-accent: #FF6B4A;      /* Orange/Corail */
+     --color-accent-hover: #E05A3A;
+     --color-text: #1F2937;        /* Gris foncé */
+     --color-text-light: #4B5563;  /* Gris moyen */
+     --color-footer: #242424;      /* Gris très foncé */
+     --color-white: #FFFFFF;
+     --color-bg-light: #F9FAFB;    /* Blanc cassé pour alternance /
+     /* Espacement & Layout */
+     --container-width: 1280px;
+     --header-height: 80px;
+     --spacing-unit: 1rem;
+     --border-radius: 12px;
+     
+     /* Typographie */
+     --font-main: 'Inter', sans-serif;
+}
+ /* --- 2. Reset & Base --- */
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+body {
+     font-family: var(--font-main);
+     color: var(--color-text);
+     line-height: 1.6;
+     background-color: var(--color-white);
+     scroll-behavior: smooth;
+}
+ a {
+     text-decoration: none;
+     color: inherit;
+     transition: color 0.2s ease;
+}
+ ul {
+     list-style: none;
+}
+ img {
+     max-width: 100%;
+     height: auto;
+     display: block;
+}
+ /* Utilitaires Accessibilité */
+ :focus-visible {
+     outline: 3px solid var(--color-accent);
+     outline-offset: 2px;
+}
+ /* --- 3. Composants Communs --- */
+ .container {
+     max-width: var(--container-width);
+     margin: 0 auto;
+     padding: 0 1.5rem; /* Padding horizontal safe-zone */
+}
+ .btn {
+     display: inline-block;
+     padding: 0.75rem 1.5rem;
+     border-radius: 50px;
+     font-weight: 600;
+     text-align: center;
+     cursor: pointer;
+     transition: all 0.2s ease;
+     border: none;
+}
+ .btn-primary {
+     background-color: var(--color-accent);
+     color: var(--color-white);
+     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+ .btn-primary:hover {
+     background-color: var(--color-accent-hover);
+     color: var(--color-white) !important;
+     transform: translateY(-2px);
+     box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+
+}
+ .btn-link {
+     color: var(--color-accent);
+     font-weight: 500;
+     padding: 0;
+ }
+ .btn-link:hover {
+     text-decoration: underline;
+}
+ .section-title {
+     font-size: 2rem;
+     font-weight: 800;
+     text-align: center;
+     margin-bottom: 3rem;
+     color: var(--color-text);
+}
+ /* Animation Fade In */
+ .fade-in {
+     opacity: 0;
+     transform: translateY(30px);
+     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+ }
+ .fade-in.is-visible {
+     opacity: 1;
+     transform: translateY(0);
+}
+ /* --- 4. Header & Navigation --- */
+ header {
+     background-color: var(--color-white);
+     height: var(--header-height);
+     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+}
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100%;
+}
+ .logo {
+     display: flex;
+     align-items: center;
+     font-weight: 800;
+     font-size: 1.5rem;
+     color: var(--color-text);
+}
+ .logo-icon {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 175px;
+     height: 100px;
+     margin-right: 0.5rem;
+}
+ /* Menu Desktop */
+ .nav-links {
+     display: flex;
+     gap: 2rem;
+     align-items: center;
+}
+ .nav-links a {
+     font-weight: 500;
+     font-size: 1rem;
+}
+ .nav-links a:hover {
+     color: var(--color-accent);
+}
+ /* Hamburger Menu (Mobile) */
+ .menu-toggle {
+     display: none;
+     background: none;
+     border: none;
+     cursor: pointer;
+     padding: 0.5rem;
+ }
+ 
+ /* Menu Mobile Container */
+ .mobile-menu {
+     display: none; /* JS le passera en block */
+     position: absolute;
+     top: var(--header-height);
+     left: 0;
+     width: 100%;
+     background-color: var(--color-white);
+     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+     padding: 1rem 0;
+     z-index: 999;
+}
+ .mobile-menu a {
+     display: block;
+     padding: 0.75rem 1.5rem;
+     font-weight: 500;
+     color: var(--color-text);
+}
+ .mobile-menu a:hover {
+     background-color: var(--color-main);
+}
+ /* --- 5. Sections --- /
+ /* Hero Section */
+ .hero {
+     background-color: var(--color-main);
+     min-height: 100vh;
+     display: flex;
+     padding: 5rem 0 6rem;
+     text-align: center;
+     align-items: center;
+     position: relative;
+}
+ .hero h1 {
+     font-size: 2.5rem;
+     line-height: 1.2;
+     margin-bottom: 1.5rem;
+     font-weight: 800;
+}
+ .hero p {
+     font-size: 1.125rem;
+     max-width: 600px;
+     margin: 0 auto 2.5rem;
+     opacity: 0.9;
+}
+ .hero-quote {
+     margin-top: 4rem;
+     padding-top: 2rem;
+     border-top: 1px solid rgba(0,0,0,0.1);
+     max-width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     font-style: italic;
+     font-size: 1.1rem;
+}
+
+/* Services Grid */
+.section-white {
+    background-color: var(--color-white);
+    padding: 5rem 0;
+}
+
+.section-blue {
+    background-color: var(--color-main);
+     padding: 5rem 0;
+}
+ .grid-3 {
+     display: grid;
+     grid-template-columns: 1fr; /* Mobile default: 1 column */
+     gap: 2rem;
+}
+ /* Cards Style & Interaction */
+ .card {
+     background-color: var(--color-white);
+     border-radius: var(--border-radius);
+     padding: 2rem;
+     border: 1px solid #E5E7EB;
+     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+}
+ /* Effet de lévitation au survol */
+ .card:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+ .card-icon {
+     font-size: 2.5rem;
+     margin-bottom: 1rem;
+     color: var(--color-accent);
+}
+ .card h3 {
+     font-size: 1.25rem;
+     margin-bottom: 0.75rem;
+     color: var(--color-text);
+}
+ .card p {
+     color: var(--color-text-light);
+     margin-bottom: 1.5rem;
+     flex-grow: 1; /* Pousse le lien vers le bas */
+}
+ /* Projets (Cards avec Images) */
+ .project-card {
+     background-color: var(--color-white);
+     border-radius: var(--border-radius);
+     overflow: hidden; /* Pour l'image */
+     border: 1px solid #E5E7EB;
+     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ .project-card:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+ .project-img {
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+}
+ .project-content {
+     padding: 1.5rem;
+}
+ .project-content h3 {
+     font-size: 1.25rem;
+     margin-bottom: 0.5rem;
+}
+ .project-content p {
+     color: var(--color-text-light);
+}
+ /* Section "À Propos" (Layout Side-by-Side) */
+ .about-layout {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 3rem;
+}
+ .about-img img {
+     width: 300px;
+     height: 300px;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 5px solid var(--color-white);
+     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+ .about-text .label {
+     text-transform: uppercase;
+     font-size: 0.85rem;
+     font-weight: 700;
+     color: var(--color-accent);
+     margin-bottom: 0.5rem;
+     display: block;
+}
+ .about-text h2 {
+     font-size: 2rem;
+     margin-bottom: 1.5rem;
+     line-height: 1.2;
+}
+ /* CTA Section Finale */
+ .cta-section {
+     background-color: var(--color-accent);
+     color: var(--color-white);
+     text-align: center;
+     padding: 5rem 0;
+     margin-top: 5rem;
+ }
+ 
+ .cta-section h2 {
+     font-size: 2.5rem;
+     margin-bottom: 1rem;
+}
+ .cta-section .btn-white {
+     background-color: var(--color-white);
+     color: var(--color-accent);
+     margin-top: 2rem;
+     font-size: 1.1rem;
+     padding: 1rem 2.5rem;
+ }
+ 
+ .cta-section .btn-white:hover {
+     background-color: #f1f1f1;
+     transform: translateY(-2px);
+}
+ /* --- 6. Footer --- */
+ footer {
+     background-color: var(--color-footer);
+     color: #D1D5DB; /* Gris clair pour texte sur fond foncé */
+     padding: 4rem 0 2rem;
+}
+ .footer-grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 3rem;
+     margin-bottom: 3rem;
+     align-items: start;
+}
+ .footer-col h4 {
+     color: var(--color-white);
+     font-size: 1.1rem;
+     margin-bottom: 1.25rem;
+     font-weight: 600;
+}
+ .footer-col ul li {
+     margin-bottom: 0.30rem;
+}
+ .footer-col a:hover {
+     color: var(--color-main);
+}
+ .footer-bottom {
+     border-top: 1px solid rgba(255,255,255,0.1);
+     text-align: center;
+     padding-top: 2rem;
+     font-size: 0.9rem;
+}
+ .footer-col .logo-icon {
+     width: 140px;
+     height: auto;
+     margin-bottom: 0.5rem;
+     display: block;
+ }
+ 
+ /* --- 7. Responsive Media Queries (Tablette & Desktop) --- */
+ @media (min-width: 768px) {
+     .section-title { font-size: 2.5rem; }
+     
+     /* Navbar */
+     .menu-toggle { display: none; }
+     .nav-links { display: flex; } /* Affiche menu desktop */
+     
+     /* Grid Layouts */
+     .grid-3 {
+         grid-template-columns: repeat(3, 1fr);
+     }
+     
+     .footer-grid {
+         grid-template-columns: repeat(4, 1fr);
+ }
+     /* About Section */
+     .about-layout {
+         flex-direction: row;
+         text-align: left;
+     }
+     .about-img {
+         flex-shrink: 0;
+ }
+     /* Hero Typography */
+     .hero h1 { font-size: 3.5rem; }
+}
+
+ /* Mobile Only Adjustments */
+ @media (max-width: 767px) {
+     .nav-links { display: none; } /* Cache menu desktop */
+     .menu-toggle { display: block; } /* Affiche bouton burger */
+     
+     .hero h1 { font-size: 2rem; }
+     .card { padding: 1.5rem; }
+     .container { padding: 0 1rem; }
+ }

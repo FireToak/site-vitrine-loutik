@@ -1,0 +1,21 @@
+# robots.txt - Loutik
+User-agent: *
+Allow: /
+
+# Pages importantes
+Allow: /index.html
+Allow: /a-propos.html
+Allow: /nos-partenaires.html
+Allow: /prestations.html
+
+# Fichiers à ne pas indexer
+Disallow: /erreur.html
+
+# Assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /favicon/
+
+# Sitemap
+Sitemap: https://www.loutik.fr/sitemap.xml

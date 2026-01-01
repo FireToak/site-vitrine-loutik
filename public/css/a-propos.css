@@ -1,0 +1,185 @@
+        /* Hero Section Spécifique */
+        .page-hero {
+            background-color: var(--color-main);
+            padding: 4rem 0 5rem;
+            text-align: center;
+            margin-bottom: 0; /* Collé à la section suivante */
+        }
+        .page-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+        .page-hero p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--color-text);
+            opacity: 0.9;
+        }
+
+        /* Section Profil (Photo + Bio Rapide) */
+        .profile-section {
+            background-color: var(--color-white);
+            padding: 4rem 0;
+            position: relative;
+        }
+        
+        .profile-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            padding: 3rem;
+            margin-top: -6rem; /* Chevauche le hero */
+            border: 1px solid #E5E7EB;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--color-white);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            background-color: var(--color-bg-light);
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .profile-status {
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            background: rgba(255, 107, 74, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+
+        .profile-bio {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            max-width: 800px;
+            line-height: 1.8;
+        }
+
+        /* Timeline / Histoire */
+        .timeline-section {
+            padding: 5rem 0;
+            background-color: var(--color-bg-light);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        /* Ligne verticale */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #E5E7EB;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            width: 50%;
+        }
+        
+        .timeline-item:nth-child(odd) { left: 0; padding-right: 3rem; text-align: right; }
+        .timeline-item:nth-child(even) { left: 50%; padding-left: 3rem; text-align: left; }
+
+        /* Point sur la timeline */
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px rgba(255, 107, 74, 0.2);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-dot { right: -12px; }
+        .timeline-item:nth-child(even) .timeline-dot { left: -12px; }
+
+        .timeline-date {
+            font-weight: 800;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            color: var(--color-text);
+        }
+
+        .timeline-content p {
+            color: var(--color-text-light);
+        }
+
+        /* Section Valeurs */
+        .values-section {
+            padding: 5rem 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Responsive spécifique */
+        @media (max-width: 768px) {
+            .profile-card { margin-top: -2rem; padding: 1.5rem; }
+            
+            /* Timeline Mobile : tout à gauche */
+            .timeline::before { left: 20px; }
+            .timeline-item { width: 100%; left: 0 !important; padding-left: 3.5rem !important; padding-right: 0 !important; text-align: left !important; }
+            .timeline-item:nth-child(odd) .timeline-dot, 
+            .timeline-item:nth-child(even) .timeline-dot { left: 8px; right: auto; }
+            
+            .values-grid { grid-template-columns: 1fr; }
+        }
+        @media (min-width: 768px) {
+            .values-grid { grid-template-columns: repeat(3, 1fr); }
+            .profile-section { padding-bottom: 6rem; }
+        }

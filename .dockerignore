@@ -1,0 +1,9 @@
+# Ignorer les fichiers de configuration
+
+.dockerignore
+.git
+.gitignore
+.vscode
+.env
+readme.md
+Dockerfile

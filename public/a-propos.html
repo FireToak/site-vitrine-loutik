@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>À Propos de Loutik - Étudiant et Entrepreneur Passionné</title>
+    <meta name="description" content="Découvrez l'histoire de Loutik : un projet né de la passion d'un étudiant en BTS SIO pour l'informatique libre et la souveraineté numérique.">
+    <link rel="canonical" href="https://www.loutik.fr/a-propos.html">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://www.loutik.fr/a-propos.html">
+    <meta property="og:title" content="À Propos de Louis & Loutik - Étudiant et Entrepreneur Passionné">
+    <meta property="og:description" content="Découvrez l'histoire de Loutik : un projet né de la passion d'un étudiant en BTS SIO pour l'informatique libre et la souveraineté numérique.">
+    <meta property="og:image" content="https://www.loutik.fr/images/logo_loutik.svg">
+    <meta property="og:image:alt" content="Logo Loutik">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Loutik">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://www.loutik.fr/a-propos.html">
+    <meta name="twitter:title" content="À Propos de Louis & Loutik">
+    <meta name="twitter:description" content="Découvrez l'histoire de Loutik et la passion pour l'informatique éthique.">
+    <meta name="twitter:image" content="https://www.loutik.fr/images/logo_loutik.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- 1. CSS GLOBAL -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- 2. CSS SPÉCIFIQUE À LA PAGE À PROPOS -->
+    <link rel="stylesheet" href="css/a-propos.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="index" class="logo" aria-label="Accueil Loutik">
+                <img src="images/logo_loutik.svg" alt="Logo Loutik" class="logo-icon">
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="nav-links">
+                <a href="index">Accueil</a>
+                <a href="a-propos">À propos</a>
+                <a href="nos-partenaires">Nos partenaires</a>
+                <a href="prestations">Prestations</a>
+                <a href="mailto:louis@loutik.fr" class="btn btn-primary">Contact</a>
+            </nav>
+
+            <!-- Bouton Mobile Hamburger (SVG Inline) -->
+            <button id="menu-button" class="menu-toggle" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile (Initialement caché via CSS) -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="index">Accueil</a>
+            <a href="a-propos">À propos</a>
+            <a href="nos-partenaires">Nos partenaires</a>
+            <a href="prestations">Prestations</a>
+            <a href="mailto:louis@loutik.fr" style="color: var(--color-accent); font-weight: 700;">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container fade-in">
+                <h1>L'Histoire de Loutik</h1>
+                <p>Comment une passion de collège s'est transformée en un service professionnel pour les PME.</p>
+            </div>
+        </section>
+
+        <!-- Profil -->
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-card fade-in">
+                    <!-- Placeholder Photo Louis -->
+                    <img src="images/photo-louis-medo.png" alt="Photo de Louis" class="profile-img">
+                    
+                    <h2 class="profile-name">Louis</h2>
+                    <span class="profile-status">Étudiant BTS SIO & Fondateur de Loutik</span>
+                    
+                    <div class="profile-bio">
+                        <p>
+                            Actuellement étudiant en <strong>BTS SIO</strong> (Services Informatiques aux Organisations) au <strong>Lycée Paul Louis Courier</strong>, je combine mes études avec ma passion pour l'administration système. Mon objectif ? Démocratiser l'informatique éthique.
+                        </p>
+                    </div>
+
+                    <div class="social-links" style="display: flex; gap: 1rem; margin-top: 2rem; justify-content: center;">
+                        <a href="https://www.linkedin.com/in/louismedo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: var(--color-text-light); transition: color 0.3s;">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="3" ry="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+
+                        <a href="https://louis.loutik.fr" target="_blank" rel="noopener noreferrer" aria-label="Portfolio" style="color: var(--color-text-light); transition: color 0.3s;">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true">
+                                <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://www.youtube.com/@firetoak" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color: var(--color-text-light); transition: color 0.3s;">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@firetoak" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color: var(--color-text-light); transition: color 0.3s;">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="timeline-section">
+            <div class="container">
+                <h2 class="section-title fade-in">Mon Parcours</h2>
+                
+                <div class="timeline">
+                    <!-- Étape 1 -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Le déclic en 4ème</div>
+                            <h3>Découverte de l'administration</h3>
+                            <p>Tout a commencé au collège. Curieux de comprendre comment fonctionnait un réseau, j'ai hébergé mon tout premier serveur Pronote dans ma chambre. C'est là que j'ai attrapé le virus de l'infrastructure.</p>
+                        </div>
+                    </div>
+
+                    <!-- Étape 2 -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Septembre 2022 - Juin 2025</div>
+                            <h3>Lycée Professionnel Henri Becquerel</h3>
+                            <p>J'ai monté un cluster Proxmox comprenant un système de backup ainsi que des services comme FOG, Active Directory, WordPress et Zabbix. Une vraie infrastructure professionnelle au lycée.</p>
+                        </div>
+                    </div>
+
+                    <!-- Étape 3 -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Septembre 2025 - Maintenant</div>
+                            <h3>BTS SIO - Paul Louis Courier</h3>
+                            <p>Je poursuis ma professionnalisation avec notamment la mise en place d'une infrastructure comprenant l'hébergement d'un site WordPress avec une solution de sauvegarde complète.</p>
+                        </div>
+                    </div>
+
+                    <!-- Étape 4 -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Novembre 2025 - Maintenant</div>
+                            <h3>Création de Loutik</h3>
+                            <p>Lancement de mon entreprise pour mettre toutes ces compétences acquises au service des professionnels qui souhaitent s'affranchir des GAFAM et reprendre le contrôle de leurs données.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valeurs / Mission -->
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title fade-in">Ma Mission</h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: var(--color-text-light);">
+                    Loutik n'est pas une simple prestation de service, c'est une démarche pédagogique et militante pour une informatique plus saine.
+                </p>
+
+                <div class="values-grid">
+                    <div class="value-card fade-in">
+                        <span class="value-icon">🚀</span>
+                        <h3>Partager ma passion</h3>
+                        <p>Rendre accessible des technologies complexes et montrer qu'une alternative performante existe.</p>
+                    </div>
+                    <div class="value-card fade-in" style="transition-delay: 0.1s;">
+                        <span class="value-icon">🤝</span>
+                        <h3>Service Professionnel</h3>
+                        <p>Permettre aux PME de bénéficier de mes connaissances techniques actualisées par mon cursus scolaire.</p>
+                    </div>
+                    <div class="value-card fade-in" style="transition-delay: 0.2s;">
+                        <span class="value-icon">🛡️</span>
+                        <h3>Souveraineté</h3>
+                        <p>Aider les entreprises locales à reprendre le contrôle de leurs données stratégiques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="cta-section">
+            <div class="container fade-in">
+                <h2>Envie de travailler avec un passionné ?</h2>
+                <p>Profitez d'une approche fraîche, transparente et personnalisée pour votre informatique.</p>
+                <a href="mailto:louis@loutik.fr" class="btn btn-white">Me contacter</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1 -->
+                <div class="footer-col">
+                    <a href="index.html">
+                        <img src="images/logo_loutik.svg" alt="Logo Loutik" class="logo-icon">
+                    </a>
+                    <ul>
+                        <li>SN Loutik</li>
+                        <li>20 rue du vieux Tours</li>
+                        <li>37000 Tours</li>
+                        <li><a href="mailto:contact@loutik.fr" style="color: var(--color-main);">contact@loutik.fr</a></li>
+                    </ul>
+                </div>
+                <!-- Col 2 -->
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+                    </ul>
+                </div>
+                <!-- Col 3 -->
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="nos-partenaires.html">Nos partenaires</a></li>
+                        <li><a href="prestations.html">Prestations</a></li>
+                    </ul>
+                </div>
+                <!-- Col 4 -->
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Restez informé de l'actualité de la souveraineté numérique.</p>
+                    <div class="social-links" style="display: flex; gap: 1rem;">
+                        <a href="https://www.linkedin.com/in/louismedo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="3" ry="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    
+                        <a href="https://discord.gg/yqQJhYM9tK" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                                <path d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-2.58-2.28-1.452-1.344-1.536-1.428.636 2.22h-13.608c-1.356 0-2.46-1.104-2.46-2.472v-16.224c0-1.368 1.104-2.472 2.46-2.472h16.08zm-4.632 15.672c2.652-.084 3.672-1.824 3.672-1.824 0-3.864-1.728-6.996-1.728-6.996-1.728-1.296-3.372-1.26-3.372-1.26l-.168.192c2.04.624 2.988 1.524 2.988 1.524-1.248-.684-2.472-1.02-3.612-1.152-.864-.096-1.692-.072-2.424.024l-.204.024c-.42.036-1.44.192-2.724.756-.444.204-.708.348-.708.348s.996-.948 3.156-1.572l-.12-.144s-1.644-.036-3.372 1.26c0 0-1.728 3.132-1.728 6.996 0 0 1.008 1.74 3.66 1.824 0 0 .444-.54.804-.996-1.524-.456-2.1-1.416-2.1-1.416l.336.204.048.036.047.027.014.006.047.027c.3.168.6.3.876.408.492.192 1.08.384 1.764.516.9.168 1.956.228 3.108.012.564-.096 1.14-.264 1.74-.516.42-.156.888-.384 1.38-.708 0 0-.6.984-2.172 1.428.36.456.792.972.792.972zm-5.58-5.604c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332.012-.732-.54-1.332-1.224-1.332zm4.38 0c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332 0-.732-.54-1.332-1.224-1.332z"/>
+                            </svg>
+                        </a>
+                    
+                        <a href="mailto:contact@loutik.fr" aria-label="Envoyer un email">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                                <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="current-year"></span> Loutik. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+<!-- JavaScript -->
+<script src="js/script.js" defer></script>
+</body>
+</html>

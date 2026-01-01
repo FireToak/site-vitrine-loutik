@@ -1,0 +1,150 @@
+        /* Hero Section Spécifique */
+        .page-hero {
+            background-color: var(--color-main);
+            padding: 4rem 0 5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        .page-hero p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--color-text);
+            opacity: 0.9;
+        }
+
+        /* Section Philosophie */
+        .philosophy-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+        }
+        
+        .philosophy-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-light);
+        }
+
+        /* Grille Partenaires */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        /* Carte Partenaire */
+        .partner-card {
+            background-color: var(--color-white);
+            border: 1px solid #E5E7EB;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--color-main);
+        }
+
+        .partner-header {
+            background-color: var(--color-bg-light);
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 180px; /* Hauteur fixe pour l'alignement */
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .partner-logo {
+            max-width: 80%;
+            max-height: 100px;
+            object-fit: contain;
+            filter: grayscale(100%); /* Effet N&B par défaut */
+            transition: filter 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .partner-card:hover .partner-logo {
+            filter: grayscale(0%); /* Couleur au survol */
+            opacity: 1;
+        }
+
+        .partner-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .partner-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .partner-type {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .partner-desc {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .partner-why {
+            margin-top: auto;
+            background-color: rgba(197, 229, 244, 0.3); /* var(--color-main) avec opacité */
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--color-text);
+        }
+        
+        .partner-why strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            color: var(--color-accent);
+        }
+
+        /* Liens externes */
+        .partner-link {
+            margin-top: 1.5rem;
+            color: var(--color-text);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        .partner-link:hover {
+            color: var(--color-accent);
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
