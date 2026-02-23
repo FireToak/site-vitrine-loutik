@@ -1,0 +1,16 @@
+services:
+  web:
+    container_name: nginx_test_vitrine
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: site-vitrine-loutik:local
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - loutik-network
+
+networks:
+  loutik-network:
+    driver: bridge
